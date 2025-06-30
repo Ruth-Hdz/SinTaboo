@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SinTaboo para Tiendas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body class="bg-white font-sans text-gray-800">
+
+<header class="flex justify-between items-center p-4 md:p-6 header-footer-bg shadow-sm sticky top-0 z-50 h-20 md:h-24">
+  <!-- Logo + nombre -->
+  <div class="flex items-center space-x-2 md:space-x-4">
+    <img src="assets/logo.png" alt="Logo SinTaboo" class="h-12 md:h-20 w-auto">
+    <a href="#Hero" class="text-2xl md:text-4xl font-bold text-gradient">SinTaboo</a>
+  </div>
+
+  <!-- Checkbox oculto para controlar menú móvil -->
+  <input type="checkbox" id="menu-toggle" class="hidden">
+
+  <!-- Navegación desktop -->
+  <nav class="hidden md:flex space-x-4 md:space-x-6 items-center">
+    <a href="#Beneficios" class="text-gray-600 hover:text-purple-600 transition-colors duration-300">Beneficios</a>
+    <a href="#testimonios" class="text-gray-600 hover:text-purple-600 transition-colors duration-300">Testimonios</a>
+    <a href="#planes" class="text-gray-600 hover:text-purple-600 transition-colors duration-300">Planes</a>
+    <a href="#contacto" class="text-gray-600 hover:text-purple-600 transition-colors duration-300">Contactanos</a>
+  </nav>
+
+  <!-- Menú hamburguesa móvil -->
+  <label for="menu-toggle" class="md:hidden cursor-pointer z-50 flex items-center">
+    <svg class="w-8 h-8 text-gray-600 hover:text-purple-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </label>
+
+  <!-- Menú móvil (parte superior derecha, mismo color que header) -->
+  <div class="md:hidden fixed top-20 right-4 w-48 bg-white header-footer-bg shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out rounded-xl" id="mobile-menu">
+    <div class="flex flex-col p-4 space-y-2">
+      <a href="#Beneficios" class="text-gray-600 hover:text-purple-600 transition-colors duration-300">Beneficios</a>
+      <a href="#testimonios" class="text-gray-600 hover:text-purple-600 transition-colors duration-300">Testimonios</a>
+      <a href="#planes" class="text-gray-600 hover:text-purple-600 transition-colors duration-300">Planes</a>
+      <a href="#contacto" class="text-gray-600 hover:text-purple-600 transition-colors duration-300">Contactanos</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  #menu-toggle:checked ~ #mobile-menu {
+  transform: translateX(0);
+}
+
+</style>
+
+  <!-- Hero -->
+  <section id="Hero" class="text-center bg-gradient-to-r from-purple-50 to-pink-50 p-12 rounded-3xl max-w-5xl mx-auto my-10 shadow-lg animate_animated animate_fadeIn">
+    <h2 class="text-4xl font-bold text-gradient mb-4 animate_animated animate_fadeInUp">Aumenta las Ventas de Tu Sex Shop 🚀</h2>
+    <p class="text-gray-600 mb-8 text-lg animate_animated animatefadeInUp animate_delay-1s">Únete a nuestra plataforma y haz crecer tu negocio con catálogos actualizados, atención automatizada y campañas discretas.</p>
+    <div class="flex flex-wrap justify-center gap-6">
+      <a href="#contacto" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full shadow-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 btn-pulse click-effect">Registra tu Tienda</a>
+      <a href="#planes" class="bg-white text-purple-600 px-6 py-3 rounded-full border border-purple-300 hover:bg-purple-50 transition-all duration-300 btn-pulse click-effect">Ver Planes</a>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+<section id="Beneficios" class="max-w-6xl mx-auto p-6 text-center">
+ <div>
+      <h2 class="text-3xl font-bold text-gradient mb-10 animate_animated animate_fadeIn">¿Por qué Sumarte a SinTaboo?</h2>
+
+ </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <div class="p-6 bg-white rounded-2xl border-gradient shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl card-hover click-effect">
+      <div class="text-5xl mb-4 animate_animated animate_bounceIn">📈</div>
+      <h3 class="text-xl font-semibold text-gradient mb-2">Más Ventas Online</h3>
+      <p class="text-gray-600">Visibiliza tus productos en nuestro marketplace especializado y capta nuevos clientes.</p>
+    </div>
+
+    <div class="p-6 bg-white rounded-2xl border-gradient shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl card-hover click-effect animate_animated animatebounceIn animate_delay-1s">
+      <div class="text-5xl mb-4">💼</div>
+      <h3 class="text-xl font-semibold text-gradient mb-2">Control de Inventario</h3>
+      <p class="text-gray-600">Gestiona tu stock de forma ordenada, sin hojas sueltas ni riesgo de perder ventas.</p>
+    </div>
+
+    <div class="p-6 bg-white rounded-2xl border-gradient shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl card-hover click-effect animate_animated animatebounceIn animate_delay-2s">
+      <div class="text-5xl mb-4">🔒</div>
+      <h3 class="text-xl font-semibold text-gradient mb-2">Ventas Discretas</h3>
+      <p class="text-gray-600">Ofrece una experiencia segura, anónima y sin censura para tu clientela.</p>
+    </div>
+
+    <div class="p-6 bg-white rounded-2xl border-gradient shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl card-hover click-effect">
+      <div class="text-5xl mb-4">📊</div>
+      <h3 class="text-xl font-semibold text-gradient mb-2">Reportes en Tiempo Real</h3>
+      <p class="text-gray-600">Consulta ventas, productos más buscados y stock disponible desde tu celular.</p>
+    </div>
+
+    <div class="p-6 bg-white rounded-2xl border-gradient shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl card-hover click-effect">
+      <div class="text-5xl mb-4">🤖</div>
+      <h3 class="text-xl font-semibold text-gradient mb-2">Chatbot Automático</h3>
+      <p class="text-gray-600">Responde dudas frecuentes de tus clientes sin descuidar el mostrador.</p>
+    </div>
+
+    <div class="p-6 bg-white rounded-2xl border-gradient shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl card-hover click-effect">
+      <div class="text-5xl mb-4">💌</div>
+      <h3 class="text-xl font-semibold text-gradient mb-2">Campañas sin Bloqueo</h3>
+      <p class="text-gray-600">Promociona tus productos sin restricciones ni bloqueos en redes sociales.</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Testimonios -->
+  <section id="testimonios" class="max-w-5xl mx-auto p-6 mt-16 text-center">
+    <h2 class="text-3xl font-bold text-gradient mb-10 animate_animated animate_fadeIn">Lo que Dicen las Tiendas</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded-2xl shadow-lg border-gradient hover:shadow-xl transition-all duration-300 card-hover">
+        <p class="italic text-gray-600 mb-4">"Gracias a SinTaboo aumentamos nuestras ventas online en un 40% y nuestros clientes aman la discreción."</p>
+        <h4 class="text-gradient font-semibold">- Sofía, Dueña de Sensual Secret</h4>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-lg border-gradient hover:shadow-xl transition-all duration-300 card-hover animate_animated animatefadeIn animate_delay-1s">
+        <p class="italic text-gray-600 mb-4">"Por fin una plataforma donde no nos censuran y podemos mostrar todo nuestro catálogo sin miedo."</p>
+        <h4 class="text-gradient font-semibold">- Marco, Gerente de Pink Passion</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planes -->
+  <section id="planes" class="max-w-6xl mx-auto p-6 mt-16 text-center">
+    <h2 class="text-3xl font-bold text-gradient mb-10 animate_animated animate_fadeIn">Planes para tu Negocio</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-2xl border-gradient shadow-lg card-hover click-effect">
+        <h3 class="text-xl font-semibold text-gradient mb-4">Básico</h3>
+        <p class="text-gray-600 mb-4">Publica hasta 30 productos y usa el chat automático.</p>
+        <p class="text-3xl font-bold text-gradient">Gratis</p>
+        <button class="mt-4 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-600 px-4 py-2 rounded-full border border-purple-200 hover:bg-purple-100 transition-all duration-300 btn-pulse">Elegir Plan</button>
+      </div>
+      <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-2xl border-gradient shadow-lg transform scale-105 card-hover click-effect">
+        <span class="bg-purple-600 text-white text-xs px-2 py-1 rounded-full mb-2 inline-block">POPULAR</span>
+        <h3 class="text-xl font-semibold text-gradient mb-4">Pro</h3>
+        <p class="text-gray-600 mb-4">Catálogo ilimitado, reportes y campañas sin restricción.</p>
+        <p class="text-3xl font-bold text-gradient">$199/mes</p>
+        <button class="mt-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 btn-pulse">Elegir Plan</button>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border-gradient shadow-lg card-hover click-effect">
+        <h3 class="text-xl font-semibold text-gradient mb-4">Premium</h3>
+        <p class="text-gray-600 mb-4">Incluye asesorías personalizadas y visibilidad preferente.</p>
+        <p class="text-3xl font-bold text-gradient">$349/mes</p>
+        <button class="mt-4 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-600 px-4 py-2 rounded-full border border-purple-200 hover:bg-purple-100 transition-all duration-300 btn-pulse">Elegir Plan</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="max-w-4xl mx-auto p-6 mt-16 text-center">
+    <h2 class="text-3xl font-bold text-gradient mb-6 animate_animated animate_fadeIn">Registra tu Tienda</h2>
+    <form class="grid gap-4 text-left bg-white p-8 rounded-2xl shadow-lg border-gradient">
+      <input type="text" placeholder="Nombre de tu tienda" class="p-3 rounded-lg border border-purple-200 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300">
+      <input type="email" placeholder="Correo electrónico" class="p-3 rounded-lg border border-purple-200 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300">
+      <input type="text" placeholder="Ciudad" class="p-3 rounded-lg border border-purple-200 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300">
+      <textarea placeholder="Mensaje (opcional)" rows="3" class="p-3 rounded-lg border border-purple-200 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300"></textarea>
+      <button type="submit" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full shadow-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 btn-pulse click-effect">Enviar Registro</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="header-footer-bg text-gray-700 py-6 mt-16 shadow-inner">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+
+        <div class="flex items-center space-x-4 min-w-max">
+          <img src="assets/logo.png" alt="Logo SinTaboo" class="h-12 w-auto" />
+          <div>
+            <h2 class="text-xl font-bold text-gradient">SinTaboo</h2>
+            <p class="text-gray-600 text-sm">La plataforma líder para sex shops</p>
+          </div>
+        </div>
+
+        <nav class="flex space-x-8 text-gray-600 min-w-max">
+          <a href="#" class="hover:text-purple-600 transition font-medium">Términos</a>
+          <a href="#" class="hover:text-purple-600 transition font-medium">Privacidad</a>
+          <a href="#" class="hover:text-purple-600 transition font-medium">FAQ</a>
+        </nav>
+
+        <div class="text-gray-600 text-sm min-w-max text-center md:text-right">
+          <p>Contacto: <a href="mailto:contacto@sintaboo.mx" class="hover:text-purple-600 underline">contacto@sintaboo.mx</a></p>
+          <p>📱 <a href="tel:+525512345678" class="hover:text-purple-600 underline">+52 55 1234 5678</a></p>
+        </div>
+
+      </div>
+
+      <div class="mt-6 border-t border-purple-200 pt-4 text-center text-gray-500 text-xs select-none">
+        © 2025 SinTaboo. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

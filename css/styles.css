@@ -1,0 +1,54 @@
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+section {
+  scroll-margin-top: 6rem; /* Ajusta según la altura del header */
+}
+
+.btn-pulse:hover {
+  animation: pulse 0.5s ease-in-out;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+img {
+  max-height: 100%;
+  height: auto;
+  width: auto;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.click-effect:active {
+  transform: scale(0.98);
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #FF3E9D, #6E48AA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.border-gradient {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #FF3E9D, #6E48AA) border-box;
+}
+
+.header-footer-bg {
+  background: linear-gradient(135deg, #f9f0ff 0%, #f0f9ff 100%);
+}
